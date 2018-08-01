@@ -1,0 +1,52 @@
+/*Slider css for the revolution slider*/
+
+
+
+.imed-sl1 img{max-width: 100%;}
+
+.bluebg-t1{font-size: 37px; color: #fff; font-family: 'Open Sans', sans-serif; font-weight: 300; line-height: 40px;}
+
+.whitebg-t1{font-size: 37px; color: #107fc9; font-family: 'Open Sans', sans-serif; font-weight: 300; line-height: 40px;}
+
+.bluebg-t2,.whitebg-t2{font-size: 27px; font-weight:bold; color: #FFF; font-family: 'Open Sans', sans-serif;}
+
+.bluebg-t3{font-size: 13px; color: #fff; font-family: 'Open Sans', sans-serif;}
+
+.whitebg-t3{font-size: 13px; color:#000; font-family: 'Open Sans', sans-serif;}
+
+.s1-but a{ color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 5px;
+  border: solid 2px #fff;
+  cursor: pointer;
+  outline: none;
+  padding: 0px;
+  display: inline-block;
+  text-align: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding:10px 15px;
+  font-weight:bold;
+  font-size:15px
+  }
+
+.s1-but a:hover{ background-color:rgba(255, 255, 255, 0.18); color:#FFF}
+
+@media (max-width: 768px) {
+    .s1-but a{
+        padding:8px;
+        font-size:12px;
+    }
+}
+@media (max-width: 480px) {
+    .s1-but a{
+        padding:3px;
+        font-size:10px;
+    }
+    .tp-caption.s1-but.customin.skewtoright.imed-sl1.start {
+        left: 57%!important;
+        top: 75%!important;
+    }
+}

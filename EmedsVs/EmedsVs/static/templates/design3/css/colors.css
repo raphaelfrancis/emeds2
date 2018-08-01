@@ -1,0 +1,68 @@
+@charset "utf-8";
+::selection {
+	background:#50c1e9; 
+}
+
+::-moz-selection {
+	background:#50c1e9; 
+}
+
+a, .portfolio-item:hover figure figcaption h6 a:hover, .portfolio-item:hover figure figcaption p a:hover, .facts .facts-icon-holder i, .list li:before, .contact address:before, .contact abbr:before, .contact abbr a:hover, .header-with-topbar .header-top ul.header-contact li a:hover, .blog-item .entry-meta .posted-on time span, .blog-item .entry-footer p a:hover, .blog-item .entry-header h4 a:hover, .widget.widget_recent_entries ul li a:hover, .widget ul li a:hover, .widget.widget_categories ul li:hover:before, .paging-navigation .pagination .page-numbers.current, .portfolio-meta-details li.links a:hover, .icon-with-title.style3 .icon-holder i, .team h6, .team .social-links li a:hover i, .icon-with-title.style5 .icon-holder i, .error404 .error-info i, .emeds_twitter_widget ul.tweets-list li a {	
+	color:#50c1e9;
+}
+
+.header-top ul li i, .header-top ul li a:hover {
+	color:#50c1e9; 
+}
+
+.main-nav > ul > li > a:hover, .header-main.sticky .main-nav > ul > li > a:hover, .main-nav > ul > li.current_page_item > a, .header-main.sticky .main-nav > ul > li.current_page_item > a, .main-nav ul.sub-menu li.current_page_item > a, .mega-menu-container ul li.current_page_item a {
+	color:#50c1e9; 
+}
+
+.heading h1:before, .heading h2:before, .heading h3:before, .heading h4:before, .heading h5:before, .portfolio-details-slideshow-nav a:hover {
+	background:#50c1e9; 
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"], .icon-with-title.style1 .icon-holder, .icon-with-title h6:before, .button, .facts:hover .facts-icon-holder, .icon-with-title.style2:hover .icon-holder, .blog-thumb-style.skin, .widget h2.widget-title:before, .widget.widget_tag_cloud .tagcloud a:hover, .sidebar-holder .widget .newsletter input[type="submit"]:hover, .paging-navigation .pagination .page-numbers:hover, blockquote.style1:before, ol.comment-list li.comment .reply a:hover, .contact-with-large-icon .contact-icon-holder, .portfolio-filter ul li a:hover, .portfolio-filter ul li a.current, .blog-item .post-thumbnail .post-format, .tabs-boxed .tabs-nav li a:hover, .tabs-boxed .tabs-nav li a.current, .icon-with-title.style4:hover .icon-holder, .team .social-links:before, .facts.style2 h6:before, .blog-thumb-style2, ol.planner-list > li h6:before, ol.planner-list > li:hover:before, .progress-bar-wrapper .progress-bar, .accordion-holder .accordion-panel.current .accordion-title .accordion-arrow, .accordion-holder .accordion-panel:hover .accordion-title .accordion-arrow, .hvr-shutter-out-horizontal:before, .icon-with-title.style7 .icon-holder, .button.stroke-style:hover, #vertical-nav .vertical-nav-dot, #vertical-nav .vertical-nav-label, .top:hover, .owl-carousel-custom-nav a:hover, #infscr-loading, #portfolio-ajax-loader {
+	background-color:#50c1e9; 
+}
+
+.icon-with-title.style2 .icon-holder, .widget.widget_tag_cloud .tagcloud a:hover, .sidebar-holder .widget .newsletter input[type="submit"], .paging-navigation .pagination .page-numbers:hover, ol.comment-list li.comment .reply a:hover, .portfolio-filter ul li a:hover, .portfolio-filter ul li a.current, .tabs-boxed .tabs-nav li, ol.planner-list > li:hover:before, .accordion-holder .accordion-panel.current .accordion-title .accordion-arrow, .accordion-holder .accordion-panel:hover .accordion-title .accordion-arrow, .button.stroke-style:hover, #vertical-nav a.is-selected .vertical-nav-dot, .owl-carousel-custom-nav a:hover, #masthead.left-side-header, .portfolio-details-slideshow-nav a:hover {
+	border-color:#50c1e9; 
+}
+
+.widget.flickr-widget ul li a:before {
+	background-color:rgba(80,193,233,0.7); 
+}
+
+.blog-thumb-style .post-thumbnail:before {
+	background:rgba(80,193,233,0.6); 
+}
+
+.blog-thumb-style.dark, footer#footer .footer-widgets, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, .header-with-topbar .header-top, .blog-item:hover .post-thumbnail .post-format, .button.stroke-style.light:hover {
+	background-color:#051f27; 
+}
+
+.button.stroke-style.light:hover {
+	border-color:#051f27; 
+}
+
+.icon-with-title.style1:hover .icon-holder, .icon-with-title.style3:hover .icon-holder {
+	background:#051f27; 
+}
+
+.portfolio-item figure figcaption, .row-overlay:before {
+	background:rgba(5,31,39,0.8); 
+}
+
+blockquote {
+	background-color:#edf9fd; 
+}
+
+.testimonial blockquote:before {
+	border-top-color:#edf9fd; 
+}
+
+.title-overlay:before {
+	background:rgba(22,96,122,0.85); 
+}

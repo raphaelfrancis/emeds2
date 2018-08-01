@@ -1,0 +1,16 @@
+.box_main{background:#C5C5C5;; border-radius:4px; margin-top:10px; color:#FFF; text-transform:uppercase}
+.left_content{width: 50%; float: left; padding: 12px; font-size: 14px;}
+.right_content{width:50%; float:right; text-align:right;}
+.button_div{width:25%; float:right; padding-right:10px; margin-top: 14px;}
+
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}

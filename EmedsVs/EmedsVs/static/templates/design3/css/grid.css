@@ -1,0 +1,179 @@
+@charset "utf-8";
+/* CSS Document */
+
+.theme-container {
+	width:100%;
+	margin:0;
+}
+.content-wrap {
+	width: 100%;
+	position: relative;
+	clear: both;
+	float: left;
+	margin: 0 0 20px;
+}
+.row-fw {
+	width:100%;
+	position:relative;
+	padding: 20px 0;
+	clear: both;
+	float: left;
+	display: block;
+}
+.row-overlay:before, .row-overlay-light:before {
+	content:"";
+	position:absolute;
+	width:100%;	
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+}
+.row-overlay-light:before{
+	background: rgba(255, 255, 255, 0.88);
+}
+.col-fw-box {
+	padding: 100px 40px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.col-fw-box {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.full-screen {
+	position: relative;
+	background-size: 100% 100%;
+}
+
+.content-holder {
+	display: inline-block;
+	width: 70%;
+	box-sizing: border-box;
+	padding: 85px 0 0;
+}
+.content-holder.fw-page {
+	width: 100%;
+}
+.sidebar-holder {
+	float: left;
+	width: 30%;
+	box-sizing: border-box;
+	padding: 85px 0 0;
+}
+.sidebar-holder.right-sidebar {
+	padding-left: 75px;
+	float: right;
+}
+.sidebar-holder.left-sidebar {
+	padding-right: 75px;
+}
+
+.container {
+	margin:auto;
+	clear: both;
+	position: relative;
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.container-fluid {
+	margin-right:auto;
+	margin-left:auto;
+	padding-left:15px;
+	padding-right:15px;
+}
+.row {
+	/*width:100%;*/
+	margin:0 -15px;
+	padding:0;
+}
+
+/*.row [class*=" col-"]:first-child, .row [class^=col-]:first-child {
+	clear:both;
+	padding-left:0
+}
+.row [class*=" col-"]:last-child, .row [class^=col-]:last-child {
+	padding-right:0
+}*/
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-1-5, .col-2-5, .col-3-5, .col-4-5 {
+	position:relative;
+	min-height:1px;
+	padding-left:15px;
+	padding-right:15px;
+	float:left;
+}
+.col-12 {
+	width:100%;
+}
+.col-11 {
+	width:91.66666667%;
+}
+.col-10 {
+	width:83.33333333%;
+}
+.col-9 {
+	width:75%;
+}
+.col-8 {
+	width:66.66666667%;
+}
+.col-7 {
+	width:58.33333333%;
+}
+.col-6 {
+	width:50%;
+}
+.col-5 {
+	width:41.66666667%;
+}
+.col-4 {
+	width:33.33333333%;
+}
+.col-3 {
+	width:25%;
+}
+.col-2 {
+	width:16.66666667%;
+}
+.col-1 {
+	width:8.33333333%;
+}
+.col-1-5 {
+	width:20%;
+}
+.col-2-5 {
+	width:40%;
+}
+.col-3-5 {
+	width:60%;
+}
+.col-4-5 {
+	width:80%;
+}
+
+.row.no-space-cols {
+	margin: 0;
+}
+.col-1.no-space, .col-2.no-space, .col-3.no-space, .col-4.no-space, .col-5.no-space, .col-6.no-space, .col-7.no-space, .col-8.no-space, .col-9.no-space, .col-10.no-space, .col-11.no-space, .col-12.no-space, .col-1-5.no-space, .col-2-5.no-space, .col-3-5.no-space, .col-4-5.no-space {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/*.row.simple-column {
+	margin-left: 0;
+}
+.row.simple-column [class*=" col-"]:last-child, .row.simple-column [class^=col-]:last-child {
+	padding-right: 20px;
+}
+.row.simple-column .col-4 {
+	padding-right: 20px;
+	padding-left: 0;
+}*/
