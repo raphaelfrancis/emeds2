@@ -1,4 +1,4 @@
-<?php $_SESSION['base_url']='http://localhost:5963/'; ?>
+<?php $_SESSION['base_url']='http://localhost/emeds2/EmedsVs/EmedsVs/'; ?>
 <div class="header-top">
     <div class="container">
     <!--top-nav-->

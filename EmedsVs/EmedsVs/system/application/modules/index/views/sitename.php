@@ -100,12 +100,17 @@ $(document).ready(function()
 {
 	<!--ajax form posting for Add new Contact starts-->
 	$('#contact-form').ajaxForm(function(e) {
+        if(e=='website_name and  username')
+        {
+            status_alert('Please Website_name and Website_url');$("#"+e).focus();
+        }
+
 		if(e=='site_def_cat_id'){status_alert('Select Category Name');$("#"+e).focus();  }
 		if(e=='website_name'){status_alert('Enter Website Name');$("#"+e).focus();  }
 		if(e=='username'){status_alert('Enter Website url');$("#"+e).focus();  }
 		if(e=='username_exist'){status_alert('Username Exist');$("#"+e).focus();  }
 
-		if(e=='success')
+		if(e=='')
 		{
 			window.location.href = "<?php echo base_url(); ?>index/sites";
 		}

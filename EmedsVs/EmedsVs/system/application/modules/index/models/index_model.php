@@ -24,6 +24,7 @@ class index_model extends CI_Model
 	
 	function getRowDataById($tablename,$field_name,$field_id)
 	{
+		
 		$this->db->where($field_name,$field_id);
 		return $this->db->get($tablename)->row();
 	}
@@ -150,7 +151,6 @@ class index_model extends CI_Model
 		$this->db->from('emeds_cus_sites');
 		$this->db->where('emeds_cus_sites.site_id',$site_id);
 		$this->db->join('emeds_templates', 'emeds_templates.temp_id = emeds_cus_sites.site_temp_id','right');
-		
 		return $this->db->get()->row();
 	}
 	
@@ -169,6 +169,16 @@ class index_model extends CI_Model
 		$this->db->where('cus_page_id',$field_id);
 		$this->db->where('temp_id',$temp_id);
 		return $this->db->get('defalut_banner')->result();
+	}
+	//added by raphael
+	public function selectsites($custid)
+	{
+		$this->db->select('site_username');
+		$this->db->from('emeds_cus_sites');
+		$this->db->where('site_cus_id',$custid);
+		$result = $this->db->get()->result_array();
+		return $result;
+		
 	}
 
 	

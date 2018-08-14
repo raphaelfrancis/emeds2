@@ -1,4 +1,4 @@
-<?php $_SESSION['base_url']='http://localhost:5963/'; 
+<?php $_SESSION['base_url']='http://localhost/emeds2/EmedsVs/EmedsVs/'; 
 $pos=strrpos($_SERVER['PHP_SELF'],"/");
 $pos++;
 $pagename=substr($_SERVER['PHP_SELF'],$pos);

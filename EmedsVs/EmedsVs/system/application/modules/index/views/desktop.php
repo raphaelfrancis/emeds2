@@ -1,7 +1,6 @@
 <?php session_start(); $_SESSION["colour"]=$this->session->userdata('colour'); ?>  
 <!doctype html>
 <html lang="en" class="no-js">
-
 <head>
     <meta charset="utf-8">
     <title>Emeds Theme</title>
@@ -17,7 +16,6 @@
 
     
 </head>
-
 <body class="full-screen-preview">
   <div id="container" class="template_viewer preview__header">
     <div id="header">
@@ -25,6 +23,7 @@
             <div id="emedsLogo">
                 <a href="<?php echo base_url(); ?>index">emeds Press</a>
             </div>
+            
             <div id="template-mode-toggle">
                 <div class="view-mode-toggle-button view-mode-toggle-button-desktop selected" data="desktop" title="Desktop view"></div>
                 <a href="<?php echo base_url(); ?>index/mobile/<?php echo $template->temp_id; ?>">
@@ -58,7 +57,7 @@
                 <?php } ?>
                 </span>
                 <span class="priceTypeWrapper"> Price: <span id="priceType">Free</span></span>
-                <a href="<?php echo base_url(); ?>index" style="float:left; margin: 10px; width: 34px;"><img src="<?php echo base_url(); ?>static/index/images/html.png" style="width:100%"/></a>
+                <a href="<?php echo base_url();?>index" style="float:left; margin: 10px; width: 34px;"><img src="<?php echo base_url(); ?>static/index/images/html.png" style="width:100%"/></a>
 
                 <!-- end of .socialButtons -->
             </div>
@@ -82,8 +81,6 @@
 </body>
 
 </html>
-
-
 <script src="<?php echo base_url(); ?>static/index/js/jquery.js"></script>
 <script src="<?php echo base_url(); ?>static/index/js/bootstrap.min.js"></script>
 <script src="<?php echo base_url(); ?>static/index/js/jquery.form.js"></script>

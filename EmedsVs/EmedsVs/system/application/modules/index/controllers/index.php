@@ -510,10 +510,29 @@ class index extends CI_Controller {
 			
 			echo 'success';return false;
 		}
-		
+		//new captcha added
 		if($action == 'default')
 		{
+			
 			$data['username']=$username;
+			$this->load->helper('captcha');
+			
+      			  
+			$vals = array(
+				'img_path'	=> './captcha/',
+				'img_url'	=> base_url().'captcha/'
+			);
+			
+			
+			$captcha = create_captcha($vals);
+			
+			$this->session->set_userdata('captchaWord', $captcha['word']);
+			
+			$data['captcha']= $captcha;
+			$custid = $this->session->userdata('userid');
+			
+			$data["cust_sites"] = $this->index_model->selectsites($custid);
+			
 			$this->template->load('master','upgrade',$data);
 		}
 	}
@@ -787,9 +806,11 @@ class index extends CI_Controller {
 						'page_photo' => $val['file_name']
 						);
 						
+						
 						$this->index_model->updateRow('emeds_cus_page_content','id',$value,$data);
 						
-						echo 'success';return false;
+						echo 'success';
+						return false;
 					
 					}
 					else 
@@ -803,6 +824,7 @@ class index extends CI_Controller {
 					'page_heading' => $this->input->post('title'),
 					'page_description' => $this->input->post('mytextarea')
 					);
+					
 					$this->index_model->updateRow('emeds_cus_page_content','id',$value,$data);
 					echo 'success';return false;
 				}
@@ -908,7 +930,6 @@ class index extends CI_Controller {
 		{
 			$data['single_content']=$this->index_model->getRowDataById('emeds_cus_page_content','id',$value);
 			$data['page']=$this->index_model->getDataById('emeds_cus_pages','id',$value);
-			
 			$this->load->view('edit_single',$data);
 		}
 	}
@@ -1140,10 +1161,12 @@ class index extends CI_Controller {
 	{
 		$value=$this->input->post('delete_id1');
 		
+		
 		$data = array(
-				'site_temp_id' => $this->input->post('template_id')
+				'site_temp_id' =>$this->input->post('template_id')
 			);
-
+		
+		
 		$this->index_model->updateRow('emeds_cus_sites','site_id',$value,$data);
 		
 		$this->session->set_flashdata('message', 'Theme changed successfully');
@@ -1212,6 +1235,12 @@ class index extends CI_Controller {
 				
 		if($action == 'create')
 		{
+			if(!$this->input->post('website_name')&&!$this->input->post('username'))
+			{
+				echo 'website_name and  username';return false;
+			}
+			
+			if(!$this->input->post('site_def_cat_id'))
 			if(!$this->input->post('site_def_cat_id')){echo 'site_def_cat_id';return false;}
 			if(!$this->input->post('website_name')){echo 'website_name';return false;}
 			if(!$this->input->post('username')){echo 'username';return false;}

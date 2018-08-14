@@ -145,7 +145,8 @@ if($this->session->userdata('status')==0){ ?>
 </div>
 </header>
 
-<?php echo $contents; ?>
+<?php echo $contents;?>
+
 
 <div class="complete-footer">
     <footer id="footer">

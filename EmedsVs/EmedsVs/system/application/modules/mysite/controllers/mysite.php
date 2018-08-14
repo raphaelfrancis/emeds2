@@ -2,8 +2,6 @@
 
 class mysite extends CI_Controller {
 	
-
-
 	public function __construct()
 	{
 		parent::__construct();
@@ -19,6 +17,7 @@ class mysite extends CI_Controller {
 
 	public function index($username='',$pagename='index')
 	{
+		
 		$data['username']=$username;
 		$data['userid']=$this->session->userdata('userid');
 		$data['content']=$this->mysite_model->mysitecontent($username,$pagename);

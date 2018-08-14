@@ -14,9 +14,11 @@ $_SESSION['username']=$username;
 <script type="text/javascript" src="<?php echo base_url(); ?>static/mysite/js/script.js"></script>
 
 </head>
+
 <body style="margin:0px;padding:0px;overflow:hidden">
 
-<?php if($userid==$content->site_cus_id){ ?>    
+<?php if($userid==$content->site_cus_id){ ?>  
+ 
 <div class="alert alert-info" style="margin-bottom: 0; border: none; text-align:center">
 <!--Registered on <?php echo date('d-m-Y',$content->site_created_date); ?>. Your website will expire in <?php echo (int)(15-(time() - $content->site_created_date) / 86400); ?> days --><a href="<?php echo base_url(); ?>index/upgrade/default/<?php echo $username; ?>" style="text-decoration:none; color:#F00">Upgrade</a> | 
   <a href="<?php echo base_url(); ?>index/sites" style="text-decoration:none;">View Mysite</a>      
@@ -24,15 +26,20 @@ $_SESSION['username']=$username;
 <?php } ?>
 
 
-<div id="ifrmWrapper" class="loading">
 	<?php
-	$query=mysql_query("select id from emeds_cus_pages where site_id=".$content->site_id." and def_page_id=1");
-	$fetch=mysql_fetch_array($query);
+  $con = mysqli_connect("localhost","emeds_emeds","Emeds123#");
+  mysqli_select_db($con,"emdes_emeds";)
+	$query=mysql_query($con,"select id from emeds_cus_pages where site_id=".$content->site_id." and def_page_id=1");
+  $fetch=mysql_fetch_array($query);
+ 
+ 
 	?>
+  <div id="ifrmWrapper" class="loading">
+  <iframe src="<?php echo base_url();?>\uploads\gallery"></iframe>
     <iframe src="<?php echo base_url().$content->folder_path; ?>/index.php?username=<?php echo $username; ?>&page_id=<?php echo $fetch['id']; ?>" id="ifrmPreview" frameborder="0"></iframe>
+    
     <div><i class="icon-spinner icon-spin"></i></div>
 </div>
-
 <?php if($userid==$content->site_cus_id){ ?>    
 <div class="floater preview-floater">
     <div class="buttonLinks save_and_view_bar">

@@ -55,11 +55,11 @@
                         </div>
                         <div class="form-group">
                         	<label class="control-label">Password *</label>
-                            <input type="password" class="form-control" placeholder="Please enter your password" name="password" id="password"/>
+                            <input type="password" class="form-control" placeholder="Please enter your password,password should be minium 6 characters" name="password" id="password"/>
                         </div>
                         <div class="form-group">
-                        	<label class="control-label">Re-Password *</label>
-                            <input type="password" class="form-control" placeholder="Please enter your password" name="re-password" id="re-password"/>
+                        	<label class="control-label">Reenter newPassword *</label>
+                            <input type="password" class="form-control" placeholder="Please confirm the password entered above" name="re-password" id="re-password"/>
                         </div>
                         <div class="form-group">
                         	<label class="control-label">Speciality *</label>
@@ -70,14 +70,14 @@
                             </select>                        
                        	</div>
                         <div class="form-group">
-                        	<label class="control-label">Website name *</label>
-                            <input placeholder="Website name" name="website_name" id="website_name" class="form-control" type="text" tabindex="1" >
+                        	<label class="control-label">Website Title *</label>
+                            <input placeholder="Website title" name="website_name" id="website_title" class="form-control" type="text" tabindex="1" >
                         </div>
                         <div class="form-group">
                         	<label class="control-label">Website url *</label>
                             <div class="row">
-                            	<div class="col-md-3 text-right" style="margin-top:6px">
-                            		www.emeds.co/
+                            	<div class="col-md-2 text-right" style="margin-top:6px" placeholder = "eg appollodental">
+                            	www.emeds.co/
                             	</div>
                             	<div class="col-md-9">
                             <input placeholder="Website url" name="username" id="username" type="text" tabindex="1" class="form-control" >
@@ -87,12 +87,16 @@
                         
                         </div>
 						<hr/>
+                        <br>
                         <div class="col-md-6">
                         <a href="<?php echo base_url(); ?>index/signin" class="btn btn-w-m btn-default" style="width:100%">Back to sign in</a>
                         </div>
 						<div class="col-md-6">
                         <button type="submit" class="btn btn-success pull-right" style="width:100%">Create</button>
                         </div>
+                        <br>
+                        <br>
+                        <br>
                     </form>
                     </div>
                 

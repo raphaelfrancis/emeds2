@@ -15,7 +15,7 @@
 |
 */
 //$config['base_url']	= 'http://keralainfotech.com/thomsontiles.com/admin/';
-$config['base_url']	= 'http://localhost:5963/site/';
+$config['base_url']	= 'http://localhost/emeds2/EmedsVs/EmedsVs';
 
 /*
 |--------------------------------------------------------------------------

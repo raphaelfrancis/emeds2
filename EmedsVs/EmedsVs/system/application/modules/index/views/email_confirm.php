@@ -30,7 +30,7 @@
                                 
                                 <tr>
                                     <td style="text-align: center;">
-                                        <a href="http://localhost:5963/index/verify_email/<?php echo base64_encode($to_mail); ?>" style="text-decoration: none; color: #FFF; background-color: #0078c1; border: solid #0078c1; border-width: 5px 10px; line-height: 2; font-weight: bold; text-align: center; cursor: pointer; display: inline-block; border-radius: 5px; text-transform: capitalize;">Confirm email address</a>
+                                        <a href="http://<?php echo base_url();?>/index/verify_email/<?php echo base64_encode($to_mail); ?>" style="text-decoration: none; color: #FFF; background-color: #0078c1; border: solid #0078c1; border-width: 5px 10px; line-height: 2; font-weight: bold; text-align: center; cursor: pointer; display: inline-block; border-radius: 5px; text-transform: capitalize;">Confirm email address</a>
                                     </td>
                                 </tr>
                               </table>

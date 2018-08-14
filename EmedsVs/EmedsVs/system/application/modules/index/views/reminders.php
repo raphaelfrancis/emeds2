@@ -41,8 +41,8 @@
 					else
 					{
 					?>
-                    <div class="alert alert-danger col-lg-12 col-sm-12 col-md-12 col-xs-12" id="contactSuccess" style="margin-top:100px">
-                        <strong>Error!</strong> There was no reminders.
+                    <div class="alert alert-info col-lg-12 col-sm-12 col-md-12 col-xs-12" id="contactSuccess" style="margin-top:100px">
+                         There was no reminders.
                     </div>
                     <?php 
 					}

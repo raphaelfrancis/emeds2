@@ -188,8 +188,9 @@
                     <div style="margin:15px"><a href="<?php echo base_url(); ?>index/desktop/<?php echo $template->temp_id; ?>" class="inner-page-butt-blue medium-but">Select</a></div>
                     </div>
                 </div></a>
-                <?php } ?>
-                 
+                <?php 
+                 }
+                 ?>
                 
                 </div>
                 
@@ -201,7 +202,6 @@
             
             
 
-            
             <div class="purchase-wrap-blue ipurchase-wrap">
             	<div class="container">
                 <div class="row">

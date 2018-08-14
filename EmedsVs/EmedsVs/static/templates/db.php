@@ -1,12 +1,11 @@
 <?php
-$servername = "localhost";
+$servername = "emeds_emeds";
 $username = "emeds";
-$password = "Emeds123";
-$dbname = "emeds";
+$password = "Emeds123#";
+$dbname = "emeds_emeds";
 
 // Create connection
-$conn = mysql_connect($servername, $username, $password);
+$conn = mysqli_connect("localhost","emeds_emeds","Emeds123#");
 // Check connection
-mysql_select_db($dbname);
-
+mysqli_select_db($conn,"emeds_emeds");
 ?>

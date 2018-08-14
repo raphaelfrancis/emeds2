@@ -8,7 +8,7 @@
     <meta name="author" content="Uniox Websolution">
 
     <title>Edit Site</title>
-
+     
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url(); ?>static/index/css/bootstrap.min.css" rel="stylesheet">
 
@@ -32,8 +32,9 @@
         <div class="main">
             <div class="row">
             	<div class="col-md-6">
-            		<h2>Edit <?php echo $page[0]->page_name; ?></h2>
+            		<h2>Edit<span style= "padding-right:15px;"></span><?php //echo $single_content->page_heading;?><?php echo $page[0]->page_name; ?></h2>
                 </div>
+                
                 <div class="col-md-3">
                 	<div class="pull-right" style="margin-top:8px">
                 	<img src="<?php echo base_url(); ?>static/index/images/loading.gif" id="loading" style="display:none"/>
@@ -54,7 +55,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="control-label">Title :</label>
-                            <input type="text" name="title" id="title" class="form-control" placeholder="Title" value="<?php echo $single_content->page_heading; ?>">
+                            <input type="text" name="title" id="title" class="form-control" placeholder="Title" value="<?php echo $page[0]->page_name; ?>">
                         </div>
                     </div>
                 </div>
@@ -63,7 +64,7 @@
                     <div class="col-lg-12">
                         <div class="form-group">
                             <label class="control-label">Description :</label>
-                            <textarea name="mytextarea" id="mytextarea" rows="20" class="jqte-test"><?php echo $single_content->page_description; ?></textarea>
+                            <textarea name="mytextarea" id="mytextarea" rows="20" class="jqte-test"><?php echo $single_content->page_description;?></textarea>
 							<script>
                                 $('.jqte-test').jqte();
                                 

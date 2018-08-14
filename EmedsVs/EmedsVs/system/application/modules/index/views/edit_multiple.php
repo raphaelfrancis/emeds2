@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -84,7 +83,7 @@
             </div>
             <div class="modal-body">
                 <button type="button" class="btn btn-danger"><i class="fa fa-3x fa-warning" style="color: #FF0;"></i></button>
-                Are you sure you want to delete this item permanently ?
+                Are you sure you want to delete this page permanently ?
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">No</button>

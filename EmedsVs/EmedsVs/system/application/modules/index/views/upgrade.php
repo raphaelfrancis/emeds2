@@ -39,13 +39,19 @@
                                 <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
                                 <h5>Website Url </h5>
                                 </div>
-                                <div class="col-lg-2 col-sm-2 col-md-2 col-xs-6" style="padding-top:10px; text-align:right">
-                                	http://localhost:5963/
-                                </div>
-                                <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
-                                <input type="text" class="contact2-textbox" placeholder="Username" name="username" id="username" value="<?php echo $username; ?>"/>
-                                </div>
                                 
+                                <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
+                                <select id="country" name="country">
+                                    <?php
+                                    foreach($cust_sites as $value)
+                                    {
+                                    ?>
+                                    <option value="<?php echo $value["site_username"];?>"><?php echo $value["site_username"];?></option>
+                                    <?php
+                                    }
+                                    ?>
+                                </div>
+                                <br>
                                 <div class="col-lg-4 col-sm-4 col-md-6 col-xs-12">
                                 <h5>Domain Name</h5>
                                 </div>
@@ -68,6 +74,12 @@
                                 </div>
                                 <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12">
                                 <input type="password" class="contact2-textbox" placeholder="Contact Phone" name="phone" id="phone">
+                                </div>
+                                <div class="col-lg-6 col-sm-12 col-md-6 col-xs-12 text-right" style="margin-top:5px">
+                                <?php print_r($captcha["image"]);?>
+                                </div>
+                                <div class="col-lg-6 col-sm-12 col-md-6 col-xs-12">
+                                <input type="text" placeholder="Captcha*" class="contact2-textbox" name="captcha" id="captcha">
                                 </div>
                                 <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                                 <section class="color-7" id="btn-click">

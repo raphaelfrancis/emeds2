@@ -133,6 +133,7 @@ $(document).ready(function()
 
 	<!--ajax form posting for Add new Contact starts-->
 	$('#contactForm').ajaxForm(function(e) { 
+        
 		if(e=='name'){status_alert('Enter Name');$("#"+e).focus();  }
 		if(e=='email'){status_alert('Enter Email Address');$("#"+e).focus();  }
 		if(e=='captcha'){status_alert('Enter Captcha');$("#"+e).focus();  }

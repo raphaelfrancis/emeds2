@@ -136,7 +136,8 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group no-margin-hr" style="text-align:right">
-                            <?php if($content->site_logo){ ?>
+                            <?php if($content->site_logo){ 
+                                ?>
                             <img src="<?php echo base_url(); ?>uploads/<?php echo $content->site_logo; ?>" class="img-thumbnail"/>
                             <?php } ?>
                         </div>
@@ -145,6 +146,7 @@
                     
                 </div>
                 <hr/>
+                
                 <div class="row">
                     <div class="col-md-6">
                         <a data-toggle="modal" data-target="#add_page" class="btn btn-w-m btn-default" style="width:100%">Create New Page</a>
@@ -163,7 +165,8 @@
                         
                         <ul class="todo-list m-t ui-sortable">
                         
-                        	<?php foreach($pages as $page){ ?>
+                        	<?php foreach($pages as $page){ 
+                                ?>
                             <li>
                                	<div class="row">
                                	<div class="col-md-6" style="margin-top:6px">

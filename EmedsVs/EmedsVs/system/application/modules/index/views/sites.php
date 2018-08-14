@@ -1,5 +1,6 @@
 <?php //print_r($mysites); ?>
 
+
 <section class="complete-content content-footer-space">
     
     <!--Mid Content Start-->
@@ -38,8 +39,8 @@
              <!-- Blog column -->
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             
-            <?php foreach($mysites as $site){ ?>
-            
+            <?php $usertempid = "";  foreach($mysites as $site){ ?>
+                
             <div class="row box-shadow">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                   <!-- Blog box -->
@@ -48,8 +49,9 @@
                         
                     </div>
                 </div> 
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                    <div class="blog-box-title"><a href="<?php echo base_url().'mysite/'.$site->site_username; ?>" target="_blank">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style = "word-wrap: break-word;">
+                    <div class="blog-box-title">
+                    <a href="<?php echo base_url().'mysite/'.$site->site_username; ?>" target="_blank">
                     <?php echo base_url().$site->site_username; ?></a>
                     </div>
                     <div class="post-meta">By 
@@ -59,11 +61,10 @@
                     <h3><?php echo $site->site_name; ?></h3>
                     <!--end-post-para-->
                     <div class="r-more">
-                    <a href="<?php echo base_url().'index/upgrade/default/'.$site->site_username;?>" class="inner-page-butt-blue small-but upgrade">Upgrade Site</a>&nbsp; | &nbsp;
-                    <a class="inner-page-butt-blue small-but" href="<?php echo base_url().'index/edit_site/'.$site->site_id; ?>">Edit Site</a>&nbsp; | &nbsp;
-                    <a class="inner-page-butt-blue small-but" href="<?php echo base_url().'mysite/'.$site->site_username; ?>">View Site</a>&nbsp; | &nbsp;
-                        <button type="button" data-toggle="modal" data-target="#template" value="<?php echo $site->site_id; ?>" class="inner-page-butt-blue small-but temp">Change template</button>&nbsp; | &nbsp;
-                        
+                    <a href="<?php echo base_url().'index/upgrade/default/'.$site->site_username;?>" class="inner-page-butt-blue small-but">Upgrade Site</a>&nbsp; | &nbsp;
+                    <a class="inner-page-butt-blue small-but" href="<?php echo base_url().'index/edit_site/'.$site->site_id;?>">Edit Site</a>&nbsp; | &nbsp;
+                    <a class="inner-page-butt-blue small-but" href="<?php echo base_url().'mysite/'.$site->site_username;?>">View Site</a>&nbsp; | &nbsp;
+                    <button type="button" data-toggle="modal" data-target="#template" value="<?php echo $site->site_id;?>" class="inner-page-butt-blue small-but temp" id = "<?php echo $site->site_temp_id;?>" onclick = "showid(this);">Change Design</button>&nbsp; | &nbsp;
     <button type="button" data-toggle="modal" data-target="#Delete" value="<?php echo $site->site_id; ?>,<?php echo $site->site_name; ?>" class="inner-page-butt-blue small-but delete">Delete</button>
                     
                     </div>
@@ -86,9 +87,9 @@
             <i class="icon-hospital2 appointment-form-icon"></i>Upgrade to Premium</div>
             <div style="margin:20px 20px 0 20px">
             <ul style="width:100%">
-            <li><i class="fa fa-angle-right about-list-arrows"></i>1 Year Domain</li>
+            <li><i class="fa fa-angle-right about-list-arrows"></i>Custom domain mapping</li>
             <li><i class="fa fa-angle-right about-list-arrows"></i>Remove Emeds Ads</li>
-            <li><i class="fa fa-angle-right about-list-arrows"></i>Get more storage & Bandwidth</li>
+            <li><a href = "<?php echo base_url().'index/upgrade';?>"><i class="fa fa-angle-right about-list-arrows"></i>Click Here</li></a>
             </ul>
                 
                 <div style="clear:both"></div>
@@ -122,16 +123,35 @@
 </form>
 <!-- Modal  Delete END-->
 <!-- Modal  change template-->
+
+
+
 <form class="form-horizontal" id="template-form" method="post" action="<?php echo base_url(); ?>index/change_theme">
 <div class="modal fade" id="template" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
+    
         <div class="modal-content">
             <div class="modal-header">
                 <input type="hidden" name="delete_id1" id="delete_id1"/>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><br />
             </div>
             <div class="modal-body">
-				<?php foreach($templates as $template){ ?>
+            <script>
+                function showid(button)
+                {
+                    var bid = button.id;
+                    var id = "temp_" + bid
+                    var radiobtn = document.getElementById(id);
+                    
+                    radiobtn.checked = true;
+                    console.log(radiobtn)
+
+                }
+                </script>
+				<?php foreach($templates as $template){ 
+                    
+                    ?>
+                    
                 <div class="doctor-box col-md-4 col-sm-6 col-xs-12">
                 <label>
                     <div class="zoom-wrap">
@@ -141,20 +161,33 @@
                     <div class="doc-name">
                         <div class="doc-name-class"><?php echo $template->temp_name; ?></div>
                         <hr />
-                        <div style="margin:15px"><input type="radio" name="template_id" value="<?php echo $template->temp_id; ?>"/></div>
+
+                        <div style="margin:15px"><input type="radio" name="template_id" value="<?php echo $template->temp_id;?>"  id = "<?php echo "temp_".$template->temp_id;?>" /></div>
                     </div>
                 </label>
                 </div>
-                <?php } ?>                    
+                <?php }
+             ?>  
+             
+                              
             </div>
+
+            
+   
+  
             <div class="modal-footer">
+                
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <button type="submit" class="btn btn-success">Change Theme</button>
+                <button type="submit" class="btn btn-success">Change Design</button>
             </div>
+           
+     
         </div>
     </div> 
 </div>
 </form>
+
+
 <!-- Modal  change template END-->
 
     
