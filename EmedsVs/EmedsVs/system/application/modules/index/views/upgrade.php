@@ -40,8 +40,9 @@
                                 <h5>Website Url </h5>
                                 </div>
                                 
-                                <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
-                                <select id="country" name="country">
+                                <div class="form-group">
+                               
+                                <select id="country" name="country"  class="col-lg-5 col-sm-5 col-md-2" style = "height: 40px;margin-left:16px;">
                                     <?php
                                     foreach($cust_sites as $value)
                                     {
@@ -50,7 +51,9 @@
                                     <?php
                                     }
                                     ?>
+                                </select>
                                 </div>
+                                <br>
                                 <br>
                                 <div class="col-lg-4 col-sm-4 col-md-6 col-xs-12">
                                 <h5>Domain Name</h5>
@@ -83,7 +86,7 @@
                                 </div>
                                 <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                                 <section class="color-7" id="btn-click">
-                                <button class="icon-mail btn2-st2 btn-7 btn-7b" type="submit" id="submit">Submit</button>
+                                <button class="icon-mail btn2-st2 btn-9 btn-7b" type="submit" id="submit" style = "margin-right:110px;">Submit</button>
                                 </section>
                                 </div>
                             </form>

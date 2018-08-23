@@ -10,8 +10,8 @@ $index_page='index.php';
 if(isset($_REQUEST['username']))
 {
 	include('../db.php');
-	$result = mysql_query("SELECT * FROM emeds_cus_sites WHERE site_username = '".$_REQUEST['username']."'");
-	$row = mysql_fetch_array($result);
+	$result = mysqli_query($conn,"SELECT * FROM emeds_cus_sites WHERE site_username = '".$_REQUEST['username']."'");
+	$row = mysqli_fetch_array($result);
 	$_SESSION['colour']=$row['site_colour_code'];
 	$_SESSION['site_name']=$row['site_name'];
 	$email=$row['site_email'];
@@ -24,8 +24,8 @@ if(isset($_REQUEST['username']))
 	$google_plus=$row['google_plus'];
 	$youtube=$row['youtube'];
 	
-	$index_page_result = mysql_query("SELECT * FROM emeds_cus_pages WHERE site_id = '".$site_id."' and def_page_id='1'");
-	$index_page_row=mysql_fetch_row($index_page_result);
+	$index_page_result = mysqli_query($conn,"SELECT * FROM emeds_cus_pages WHERE site_id = '".$site_id."' and def_page_id='1'");
+	$index_page_row=mysqli_fetch_row($index_page_result);
 	$index_page='index.php?username='.$_REQUEST['username'].'&page_id='.$index_page_row[0];
 }
 ?>
@@ -88,8 +88,8 @@ if(isset($_REQUEST['username']))
                 if(isset($_REQUEST['page_id']))
                 {
                     $i=0;
-                    $gallery_result = mysql_query("SELECT * FROM emeds_cus_gallery WHERE cus_page_id = '".$_REQUEST['page_id']."'");
-                    while($gallery_array = mysql_fetch_array($gallery_result)){ $i++;
+                    $gallery_result = mysqli_query($conn,"SELECT * FROM emeds_cus_gallery WHERE cus_page_id = '".$_REQUEST['page_id']."'");
+                    while($gallery_array = mysqli_fetch_array($gallery_result)){ $i++;
                     ?>					
                     <article class="col-3 portfolio-item">
 						<figure>

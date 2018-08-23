@@ -21,6 +21,7 @@ class mysite extends CI_Controller {
 		$data['username']=$username;
 		$data['userid']=$this->session->userdata('userid');
 		$data['content']=$this->mysite_model->mysitecontent($username,$pagename);
+		
 		$this->load->view('mytemplate',$data);
 	}
 	public function sitecontent()

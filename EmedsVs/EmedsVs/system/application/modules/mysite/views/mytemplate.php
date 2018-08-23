@@ -27,15 +27,20 @@ $_SESSION['username']=$username;
 
 
 	<?php
-  $con = mysqli_connect("localhost","emeds_emeds","Emeds123#");
-  mysqli_select_db($con,"emdes_emeds";)
-	$query=mysql_query($con,"select id from emeds_cus_pages where site_id=".$content->site_id." and def_page_id=1");
-  $fetch=mysql_fetch_array($query);
+  
+  // Create connection
+  $conn = mysqli_connect("localhost","emeds_emeds","Emeds123#");
+  // Check connection
+  mysqli_select_db($conn,"emeds_emeds");
+  
+	$query=mysqli_query($conn,"select id from emeds_cus_pages where site_id=".$content->site_id." and def_page_id=1");
+  $fetch=mysqli_fetch_array($query);
+  
  
  
 	?>
   <div id="ifrmWrapper" class="loading">
-  <iframe src="<?php echo base_url();?>\uploads\gallery"></iframe>
+  
     <iframe src="<?php echo base_url().$content->folder_path; ?>/index.php?username=<?php echo $username; ?>&page_id=<?php echo $fetch['id']; ?>" id="ifrmPreview" frameborder="0"></iframe>
     
     <div><i class="icon-spinner icon-spin"></i></div>

@@ -86,7 +86,7 @@
                     </li>
                     <li>
                         <i class="icon-phone2 contact-side-icon"></i>
-                    <span class="contact-side-txt">Phone: <span class="iside-bar-cfont">+91 9809 254252
+                    <span class="contact-side-txt">Phone: <span class="iside-bar-cfont">+91 9074059240
                     </span></span>
                     </li>
                     

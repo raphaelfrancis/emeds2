@@ -9,8 +9,8 @@ $index_page='index.php';
 if(isset($_REQUEST['username']))
 {
 	include('../db.php');
-	$result = mysql_query("SELECT * FROM emeds_cus_sites WHERE site_username = '".$_REQUEST['username']."'");
-	$row = mysql_fetch_array($result);
+	$result = mysqli_query($conn,"SELECT * FROM emeds_cus_sites WHERE site_username = '".$_REQUEST['username']."'");
+	$row = mysqli_fetch_array($result);
 	$_SESSION['colour']=$row['site_colour_code'];
 	$_SESSION['site_name']=$row['site_name'];
 	$email=$row['site_email'];
@@ -23,11 +23,11 @@ if(isset($_REQUEST['username']))
 	$google_plus=$row['google_plus'];
 	$youtube=$row['youtube'];
 	
-	$pages = mysql_query("SELECT * FROM emeds_cus_pages WHERE id = '".$_REQUEST['page_id']."'");
-	$pagename = mysql_fetch_row($pages);
+	$pages = mysqli_query($conn,"SELECT * FROM emeds_cus_pages WHERE id = '".$_REQUEST['page_id']."'");
+	$pagename = mysqli_fetch_row($pages);
 	$page_name=$pagename[3];
 	
-	$index_page_result = mysql_query("SELECT * FROM emeds_cus_pages WHERE site_id = '".$site_id."' and def_page_id='1'");
+	$index_page_result = mysqli_query($conn,"SELECT * FROM emeds_cus_pages WHERE site_id = '".$site_id."' and def_page_id='1'");
 	$index_page_row=mysql_fetch_row($index_page_result);
 	$index_page='index.php?username='.$_REQUEST['username'].'&page_id='.$index_page_row[0];
 	
@@ -35,11 +35,11 @@ if(isset($_REQUEST['username']))
 if(isset($_REQUEST['page_id']))
 {
 
-	$about_result = mysql_query("SELECT * FROM emeds_cus_page_content WHERE cus_page_id = '".$_REQUEST['page_id']."'");
-	$about_array = mysql_fetch_array($about_result);
+	$about_result = mysqli_query($conn,"SELECT * FROM emeds_cus_page_content WHERE cus_page_id = '".$_REQUEST['page_id']."'");
+	$about_array = mysqli_fetch_array($about_result);
 	
-	$pages = mysql_query("SELECT * FROM emeds_cus_pages WHERE id = '".$_REQUEST['page_id']."'");
-	$pagename = mysql_fetch_row($pages);
+	$pages = mysqli_query($conn,"SELECT * FROM emeds_cus_pages WHERE id = '".$_REQUEST['page_id']."'");
+	$pagename = mysqli_fetch_row($pages);
 	$page_name=$pagename[3];
 }
 
@@ -89,8 +89,8 @@ if(isset($_REQUEST['page_id']))
                 if(isset($_REQUEST['page_id']))
                 {
                     $i=0;
-                    $service_result = mysql_query("SELECT * FROM emeds_cus_page_content WHERE cus_page_id = '".$_REQUEST['page_id']."'");
-                    while($service_array = mysql_fetch_array($service_result)){ $i++;
+                    $service_result = mysqli_query($conn,"SELECT * FROM emeds_cus_page_content WHERE cus_page_id = '".$_REQUEST['page_id']."'");
+                    while($service_array = mysqli_fetch_array($service_result)){ $i++;
                     ?>   
                     
                     	<div class="col-12">

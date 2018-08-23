@@ -9,10 +9,10 @@ if(isset($_REQUEST['username']))
 <nav class="top-nav two">
     <ul class="top-nav">
     	<?php
-            $result = mysql_query("SELECT * FROM emeds_cus_pages INNER JOIN emeds_pages_default
+            $result = mysqli_query($conn,"SELECT * FROM emeds_cus_pages INNER JOIN emeds_pages_default
     ON emeds_pages_default.def_page_id=emeds_cus_pages.def_page_id WHERE emeds_cus_pages.site_id = '".$site_id."'");
 		$i=0;
-		while ($row = mysql_fetch_array($result)) 
+		while ($row = mysqli_fetch_array($result)) 
 		{
 		$i++;
 		?>
